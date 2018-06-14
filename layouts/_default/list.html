@@ -9,17 +9,24 @@
 <input type="text" id="filter_ul" onkeyup="myFunction()" placeholder="Filter by keywords..." title="Type in keywords">
 
 
-<ul id="main_ul" style="padding-left:0">
   {{ range (where .Data.Pages "Section" "!=" "") }}
-  <li class = "post_listing" style="list-style-type: none;">
-    <button onclick="copyToClipboard(make_link({{ .URL }},{{ .Title }}))" class="copy_link" style="visibility:hidden">link</button>
-    <span class="date">{{ .Date.Format "2006/01/02" }}</span>
+  
+  <hr>
+  <div class = "post_listing" style="display:table;width:100%">
+        <div style="width:25%;height:150px;float:left">
+  
+      {{ if .Params.thumbnail }}
+        <img src = "{{.Params.thumbnail}}" style="max-width:100%;max-height:150px">
+      {{ end }}
+          </div>
+
+    <div style="width:75%;float:left">
+    <span class="date">{{ .Date.Format "2006/01/02" }}</span>     <button onclick="copyToClipboard(make_link({{ .URL }},{{ .Title }}))" class="copy_link" style="visibility:hidden">link</button>
+
+    <br />
     <a href="{{ .URL }}" >{{ .Title }}</a>
-    {{ if .Params.thumbnail }}
-      thumbnail-1.png
-    {{ end }}
-  </li>
+    </div>
+    </div>
   {{ end }}
-</ul>
 
 {{ partial "footer.html" . }}
