@@ -6,11 +6,18 @@
 
 {{ .Content }}
 
-<ul>
+<input type="text" id="filter_ul" onkeyup="myFunction()" placeholder="Filter by keywords..." title="Type in keywords">
+
+
+<ul id="main_ul" style="padding-left:0">
   {{ range (where .Data.Pages "Section" "!=" "") }}
-  <li>
+  <li class = "post_listing" style="list-style-type: none;">
+    <button onclick="copyToClipboard(make_link({{ .URL }},{{ .Title }}))" class="copy_link" style="visibility:hidden">link</button>
     <span class="date">{{ .Date.Format "2006/01/02" }}</span>
-    <a href="{{ .URL }}">{{ .Title }}</a>
+    <a href="{{ .URL }}" >{{ .Title }}</a>
+    {{ if .Params.thumbnail }}
+      thumbnail-1.png
+    {{ end }}
   </li>
   {{ end }}
 </ul>
