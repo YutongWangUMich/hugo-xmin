@@ -4,8 +4,7 @@ author: Frida Gomam
 date: '2015-07-23T21:13:14-05:00'
 tags:
   - Tutorial
-thumbnail: /post/2015-07-23-r-rmarkdown_files/figure-html/thumbnail-1.png
-description: How to add thumbnails to post listing?
+thumbnail: https://www.dropbox.com/s/jf75yd5jyjjko2s/pie-1.png?raw=1
 ---
 
 
@@ -27,9 +26,9 @@ fit
 
 # Including Plots
 
-You can also embed plots. See Figure \@ref(fig:thumbnail) for example:
+You can also embed plots. See Figure \@ref(fig:pie) for example:
 
-```{r thumbnail, fig.cap='A fancy pie chart.', tidy=FALSE}
+```{r pie, fig.cap='A fancy pie chart.', tidy=FALSE}
 par(mar = c(0, 1, 0, 1))
 pie(
   c(280, 60, 20),
@@ -38,6 +37,3 @@ pie(
   init.angle = -50, border = NA
 )
 ```
-
-
-You might have noticed that the above figure has been selected for thumbnail. To choose thumbnail, simply name the knitr chunk `thumbnail` and run the addin [Insert Thumbnail](https://github.com/beeflavor/useful-blogdown-addins).
