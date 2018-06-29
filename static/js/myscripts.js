@@ -2,27 +2,22 @@ function make_link(url,title){
   return "<a href = \"" + url + "\">"+title+"</a>";
 }
 
+function make_file_link(html_file_path){
+  return "file.edit(\"content/"+html_file_path.slice(0,-5)+".Rmd\")";
+}
+
+function make_remove_link(html_file_path){
+  var ret_string = "file.remove(\"content/"+html_file_path.slice(0,-5)+".Rmd\");"
+  ret_string += "file.remove(\"content/"+html_file_path.slice(0,-5)+".md\");";
+  ret_string += "file.remove(\"content/"+html_file_path.slice(0,-5)+".html\")";
+  return ret_string;
+}
+
+
 function copyToClipboard(text) {
   window.prompt("Copy to clipboard: Cmd+C, Enter", text);
 }
 
-
-function myFunction() {
-    var input, filter, ul, li, a, i;
-    input = document.getElementById("filter_ul");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("main_ul");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-
-        }
-    }
-}
 
 
 $( document ).ready(function() {
