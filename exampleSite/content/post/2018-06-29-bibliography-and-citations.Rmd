@@ -1,0 +1,36 @@
+---
+title: Bibliography and citations
+author: ''
+date: '2018-06-29'
+tags:
+  - Tutorial
+slug: bibliography-and-citations
+---
+
+# Basic usage
+
+1. Put your .bib files in the `content/post` directory. Say your file is named `references.bib`.
+2. Put `bibliography: [references.bib]` in the metadata of a post.
+3. Use the R package [citr](https://cran.r-project.org/web/packages/citr/README.html) to insert citations.
+
+# Bibliography management software
+
+We recommend you use the [BibDesk](https://bibdesk.sourceforge.io/) for citation management, which is a software for managing .bib files.
+
+To make BibDesk work with markdown, do the following:
+
+1. Go to `Preferences -> Template Files`.
+
+2. Edit `citeServiceTemplate.txt` so that its content is
+
+```
+@<$publications.citeKey.@componentsJoinedByDefaultJoinString/>
+```
+
+3. Go to  `Preferences -> Citation Behavior`.
+
+4. Set the `Default format` option to `Template`. Set its corresponding `Template` option to `citeServiceTemplate`. It should look like the following:
+
+![](https://www.dropbox.com/s/egmdmr4x37r1nz9/citation_behavior.png?raw=1)
+
+Now you can drag directly from BibDesk into RStudio.
