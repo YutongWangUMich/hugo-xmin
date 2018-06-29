@@ -8,4 +8,8 @@ title: Home
 
 ## _Keep it simple, but not simpler_
 
-**XMin** is a Hugo theme written by [Yihui Xie](https://yihui.name). This is a fork written by Yutong Wang that seeks to extend the functionality of XMin for the purpose of maintaining an electronic lab notebook. This example site contains posts tagged as `Tutorial` that explains these functionalities.
+**XMin** is a Hugo theme written by [Yihui Xie](https://yihui.name). This is a fork written by Yutong Wang that seeks to extend the functionality of XMin for the purpose of maintaining an electronic lab notebook. This example site contains posts tagged as `Tutorial` that explain these functionalities.
+
+Math should still work
+
+`$${\sqrt {n}}\left(\left({\frac {1}{n}}\sum _{i=1}^{n}X_{i}\right)-\mu \right)\ {\xrightarrow {d}}\ N\left(0,\sigma ^{2}\right)$$`
