@@ -13,6 +13,10 @@ function make_remove_link(html_file_path){
   return ret_string;
 }
 
+function make_readRDS_code(path){
+  return "readRDS(file=\"../../"+path + "/FILE_NAME\")";
+}
+
 
 function copyToClipboard(text) {
   window.prompt("Copy to clipboard: Cmd+C, Enter", text);
