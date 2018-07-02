@@ -1,0 +1,15 @@
+---
+title: GUI
+author: Yutong Wang
+date: '2018-07-02'
+tags:
+  - Tutorial
+slug: gui
+RDSfile: Rds_files/2018-07-02-gui
+---
+
+We include 4 functions: link, edit, remove and readRDS
+
+![](https://www.dropbox.com/s/jvtp2q4v3h0o7bq/gui.png?raw=1)
+
+readRDS is available only for posts that saves output as RDS.

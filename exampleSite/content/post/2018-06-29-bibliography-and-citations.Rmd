@@ -1,11 +1,13 @@
 ---
 title: Bibliography and citations
-author: ''
+author: Yutong Wang
 date: '2018-06-29'
 tags:
   - Tutorial
 slug: bibliography-and-citations
+thumbnail: https://www.dropbox.com/s/egmdmr4x37r1nz9/citation_behavior.png?raw=1
 ---
+
 
 # Basic usage
 
