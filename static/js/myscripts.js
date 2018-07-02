@@ -7,9 +7,10 @@ function make_file_link(html_file_path){
 }
 
 function make_remove_link(html_file_path){
-  var ret_string = "file.remove(\"content/"+html_file_path.slice(0,-5)+".Rmd\");"
-  ret_string += "file.remove(\"content/"+html_file_path.slice(0,-5)+".md\");";
-  ret_string += "file.remove(\"content/"+html_file_path.slice(0,-5)+".html\")";
+  var path = html_file_path.replace(/\.[^/.]+$/, "");
+  var ret_string = "file.remove(\"content/"+path+".Rmd\");"
+  ret_string += "file.remove(\"content/"+path+".md\");";
+  ret_string += "file.remove(\"content/"+path+".html\")";
   return ret_string;
 }
 
