@@ -5,7 +5,7 @@ date: '2018-07-02'
 tags:
   - Tutorial
 slug: using-figures-as-thumbnails
-thumbnail: /post/2018-07-02-using-figures-as-thumbnails_files/figure-html/thumbnail-1.png
+thumbnail: https://www.dropbox.com/s/kav3fs9go97ifr7/thumbnail-1.png?raw=1
 ---
 
 
@@ -16,6 +16,8 @@ set.seed(1)
 res <- rnorm(n=1000,mean=0,sd=1)
 hist(res,breaks = 100)
 ```
+
+![](https://www.dropbox.com/s/kav3fs9go97ifr7/thumbnail-1.png?raw=1)
 
 If you want to use this knitr chunk's figure output as thumbnail, put 
 `thumbnail` as the chunk name. Run `blogdown::serve_site()`, then run the `Insert thumbnail` addin.
