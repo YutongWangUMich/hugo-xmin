@@ -5,7 +5,6 @@ date: '2018-07-02'
 tags:
   - Tutorial
 slug: gui
-RDSfile: Rds_files/2018-07-02-gui
 ---
 
 We include 4 functions: link, edit, remove and readRDS

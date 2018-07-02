@@ -6,7 +6,7 @@ slug: saving-rds-files
 categories: []
 tags: 
   - Tutorial
-RDSfile: Rds_files/2018-07-02-saving-rds-files
+aux_files_dir: aux_files/2018-07-02-saving-rds-files
 thumbnail: https://www.dropbox.com/s/ogm6gd90a2yel35/saveRDS.png?raw=1
 ---
 

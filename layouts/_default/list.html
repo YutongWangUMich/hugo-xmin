@@ -35,8 +35,8 @@
 <button onclick="copyToClipboard(make_file_link({{ .File.Path }}))" class="copy_link" style="visibility:hidden">edit</button>
 
 <button onclick="copyToClipboard(make_remove_link({{ .File.Path }}))" class="copy_link" style="visibility:hidden">remove</button>
-{{ if .Params.RDSfile }}
-<button onclick="copyToClipboard(make_readRDS_code({{ .Params.RDSfile }}))" class="copy_link" style="visibility:hidden">readRDS</button>
+{{ if .Params.aux_files_dir }}
+<button onclick="copyToClipboard(make_readRDS_code({{ .Params.aux_files_dir }}))" class="copy_link" style="visibility:hidden">aux</button>
 {{ end }}
 
     <br />
