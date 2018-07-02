@@ -15,7 +15,7 @@ function make_remove_link(html_file_path){
 }
 
 function make_readRDS_code(path){
-  return "readRDS(file=\"../../"+path + "/FILE_NAME\")";
+  return "../../"+path + "/)";
 }
 
 
