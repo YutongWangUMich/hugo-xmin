@@ -1,0 +1,39 @@
+---
+title: Saving RDS files
+author: ''
+date: '2018-07-02'
+slug: saving-rds-files
+categories: []
+tags: 
+  - Tutorial
+aux_files_dir: aux_files/2018-07-02-saving-rds-files
+thumbnail: https://www.dropbox.com/s/ogm6gd90a2yel35/saveRDS.png?raw=1
+---
+
+
+Suppose you have a very large dataset
+
+```{r}
+res<-rnorm(n=1000,mean=0,sd=1)
+```
+
+and you wish to save it somewhere in an organized way. Then use the `save RDS file` addin to insert the saveRDS code. 
+
+![](https://www.dropbox.com/s/ogm6gd90a2yel35/saveRDS.png?raw=1)
+
+The addin automatically create the directory and the script for saving the file.
+
+
+```{r}
+saveRDS(res,
+	file = "../../Rds_files/2018-07-02-saving-rds-files/res.RDS")
+```
+
+
+To load the file, use the `Read RDS file` addin
+
+```{r}
+res<-readRDS(
+	file = "../../Rds_files/2018-07-02-saving-rds-files/res.RDS")
+```
+

@@ -8,7 +8,4 @@ title: Home
 
 ## _Keep it simple, but not simpler_
 
-**XMin** is a Hugo theme written by [Yihui Xie](https://yihui.name). This is a fork written by [Yutong Wang](https://github.com/beeflavor/) to extend the functionality of XMin for maintaining an [RStudio](https://www.rstudio.com/) based electronic lab notebook.
-
-
----
+**XMin** is a Hugo theme written by [Yihui Xie](https://yihui.name). This is a fork written by Yutong Wang that seeks to extend the functionality of XMin for the purpose of maintaining an electronic lab notebook. This example site contains posts tagged as `Tutorial` that explains these functionalities.
