@@ -14,8 +14,15 @@ function make_remove_link(html_file_path){
   return ret_string;
 }
 
-function make_readRDS_code(path){
-  return "../../"+path + "/)";
+function make_readRDS_code(aux_files_path, object_name){
+  var file_ext = object_name.split(".").pop();
+  var file_name = object_name.split('.').slice(0, -1).join('.');
+  var output = "";
+  if(file_ext.toUpperCase() == "RDS"){
+    output = file_name + " <- readRDS(file = \"" + aux_files_path + object_name + "\")";
+  }
+  
+  return output;
 }
 
 

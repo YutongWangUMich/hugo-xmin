@@ -5,12 +5,12 @@
 {{ end }}
 
 {{ .Content }}
-
+<input type="text" id="myInput" onkeyup="filterByText()" placeholder="Filter by string...">
 
   {{ range (where .Data.Pages "Section" "!=" "") }}
   
-  <hr>
   <div class = "post_listing" style="display:table;width:100%">
+  <hr>
       {{ if .Params.thumbnail }}
         <div style="width:25%;height:100%;float:left">
   
@@ -35,23 +35,39 @@
 <button onclick="copyToClipboard(make_file_link({{ .File.Path }}))" class="copy_link" style="visibility:hidden">edit</button>
 
 <button onclick="copyToClipboard(make_remove_link({{ .File.Path }}))" class="copy_link" style="visibility:hidden">remove</button>
+
 {{ if .Params.aux_files_dir }}
-<button onclick="copyToClipboard(make_readRDS_code({{ .Params.aux_files_dir }}))" class="copy_link" style="visibility:hidden">aux</button>
+  <button onclick="copyToClipboard({{ .Params.aux_files_dir }})" class="copy_link" style="visibility:hidden">aux</button>
 {{ end }}
 
     <br />
+    
     {{ if .Description}}
-    <span>{{ .Description }}</span>
-    <br />
+      <span>{{ .Description }}</span>
+      <br />
     {{ end }}
-      {{ if .Params.Tags }}
-    <span class="tags">
-        {{ range .Params.tags }}
-    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-  {{ end }}
-
-</span>
+    
+    {{ if .Params.Tags }}
+      <div class="tags">
+          {{ range .Params.tags }}
+            <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="tag">{{ . }}</a>
+          {{ end }}
+      </div>
+    {{ end }}
+    
+    {{ if .Params.aux_files }}
+    {{ $aux_files_dir := .Params.aux_files_dir }}
+    <div class = "aux_files">
+    &#128190;
+      {{ range .Params.aux_files }}
+        <button onclick="copyToClipboard(make_readRDS_code({{ $aux_files_dir }},{{ . }}))" class="load_button">{{ . }}</button>
       {{ end }}
+      </div>
+    {{ end }}
+    
+    
+    
+    
 
     </div>
     </div>

@@ -49,3 +49,68 @@ table {
 table thead th { border-bottom: 1px solid #ddd; }
 th, td { padding: 5px; }
 thead, tfoot, tr:nth-child(even) { background: #eee }
+
+
+/* tags */
+
+
+/* tags */
+
+
+.tags {
+  list-style: none;
+  margin: 0;
+  overflow: hidden; 
+  padding: 0;
+}
+
+.tags a {
+  float: left; 
+}
+
+.tag {
+  background: #eee;
+  font-size: 0.8em;
+  border-radius: 3px 0 0 3px;
+  color: #999;
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  padding: 0 13px 0 15px;
+  position: relative;
+  margin: 4px;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
+
+.tag::before {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  content: '';
+  height: 5px;
+  left: 5px;
+  position: absolute;
+  width: 5px;
+  top: 8px;
+}
+
+.tag::after {
+  background: #fff;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #eee;
+  border-top: 10px solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.tag:hover {
+  background-color: crimson;
+  color: white;
+}
+
+.tag:hover::after {
+   border-left-color: crimson; 
+}
