@@ -6,6 +6,7 @@ slug: using-figure-from-post-as-thumbnail
 tags:
   - Tutorial
 thumbnail: /post/2019-01-26-using-figure-from-post-as-thumbnail_files/figure-html/thumbnail-1.png
+description: After a fresh install, you should see a broken image link directly to the left. Open this post and run "Touch File" in the blogdown Addin will make the image appear.
 ---
 
 ```{r thumbnail}
