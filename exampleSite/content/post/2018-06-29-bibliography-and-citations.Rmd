@@ -6,6 +6,7 @@ tags:
   - Tutorial
 slug: bibliography-and-citations
 thumbnail: https://www.dropbox.com/s/egmdmr4x37r1nz9/citation_behavior.png?raw=1
+description: How to cite papers inside RStudio.
 ---
 
 
@@ -34,5 +35,6 @@ To make BibDesk work with markdown, do the following:
 4. Set the `Default format` option to `Template`. Set its corresponding `Template` option to `citeServiceTemplate`. It should look like the following:
 
 ![](https://www.dropbox.com/s/egmdmr4x37r1nz9/citation_behavior.png?raw=1)
+
 
 Now you can drag directly from BibDesk into RStudio.
